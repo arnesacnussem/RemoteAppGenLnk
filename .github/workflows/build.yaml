@@ -15,7 +15,7 @@ jobs:
           go-version: 1.21
 
       - name: 🏗️ Build
-        run: go build -o ragl.exe
+        run: env GOOS=windows GOARCH=amd64 go build -o ragl.exe
 
       - name: 📦 Release
         uses: softprops/action-gh-release@v2
